@@ -1,11 +1,17 @@
-import { Dashboard } from "./Dashboard"
+import { Dashboard } from "./Screen/Dashboard"
 
-function App() {
+import { ThemeProvider } from "styled-components"
+import { defaultTheme } from "./Styles/theme"
+import { GlobalStyled } from "./Styles/global"
+import { CreateUser } from "./Screen/CreateUser"
+
+export function App() {
   return (
     <>
-     <Dashboard/>
+      <ThemeProvider theme={defaultTheme}>
+        <CreateUser />
+        <GlobalStyled />
+      </ThemeProvider>
     </>
   )
 }
-
-export default App
