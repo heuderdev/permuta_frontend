@@ -1,19 +1,26 @@
 
-import{
-    Container, 
+import {
+    Container,
     Logo,
-    ButtomLogout
 
 } from './styled'
 
+import { SignOut } from 'phosphor-react'
+
 import logoHIT from '../../assets/logo.png'
+import { NavLink } from 'react-router-dom'
 
 export const Header = () => {
-    return(
+    return (
         <Container>
-             <Logo src={logoHIT} alt="logotipo" />
-             <ButtomLogout>sair</ButtomLogout>
-
+            <Logo src={logoHIT} alt="logotipo" />
+            <nav>
+                <NavLink
+                    to='/login' title='login'>
+                    <SignOut size={24} />
+                    Sair
+                </NavLink>
+            </nav>
         </Container>
     )
 }

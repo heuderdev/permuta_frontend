@@ -13,7 +13,8 @@ export const defaultTheme = {
        success: '#03b252',
        shape: '#e1e1e8',
        shape_dark: '#29292e',
-       buttonLogin: '#fff'
+       buttonLogin: '#fff',
+       BackgroundFormulary: '#323238'
     },
     fonts: {
         primary_500:'Inter_400Regular',

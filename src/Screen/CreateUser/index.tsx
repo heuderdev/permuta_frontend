@@ -32,7 +32,7 @@ export function CreateUser() {
                         <Input type='password' />
                     </Formulary>
                     <BoutonBox>
-                        <Button $primary >Enviar</Button>
+                        <Button>Enviar</Button>
                         <Button>Cancelar</Button>
 
                     </BoutonBox>

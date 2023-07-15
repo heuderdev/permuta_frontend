@@ -2,11 +2,11 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-    height: 88vh;
+    height: calc(100vh - 5rem);
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
+    
 `;
 
 
@@ -25,7 +25,7 @@ export const Form = styled.form`
     display: flex;
     flex-direction: column;
 
-    background: ${props => props.theme['gray-700']};
+    background: ${(props) => props.theme.colors.BackgroundFormulary};
     line-height: 1.5;
 `;
 

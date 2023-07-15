@@ -3,8 +3,9 @@ import styled from "styled-components";
 
 
 export const Container = styled.header`
-   
-    background: ${props => props.theme['gray-900']};
+   width:100% ;
+   border-bottom: 1px solid ${(props) => props.theme.colors.background_primary};
+
 
 `;
 

@@ -7,6 +7,34 @@ export const Container = styled.header`
     display: flex;
     align-self: center;
     justify-content: space-between;
+    // border no header
+    border-bottom: 1px solid ${(props) => props.theme.colors.background_primary};
+
+    nav {
+        display: flex;
+        gap: 0.5rem;
+    }
+
+    a{
+        width: 3rem;
+        height: 3rem;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        color: ${(props) => props.theme.colors.background_primary};
+        border-top:  3px solid transparent;
+        border-bottom:  3px solid transparent;
+
+
+        &:hover{
+            border-bottom: 3px solid ${(props) => props.theme.colors.success};
+        }
+
+
+    }
+
 `;
 
 export const Logo = styled.img`
@@ -14,21 +42,3 @@ export const Logo = styled.img`
     height: 4rem;
 `;
 
-export const ButtomLogout = styled.a`
-
-    border-radius: 8px;
-    border: 1px solid ${props => props.theme['green-500']};
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0.785rem;
-    height: 2rem;
-    margin: 0;
-    cursor: pointer;
-
-&:hover {
-    filter: brightness(0.85);
-    background-color: ${props => props.theme['green-500']};
-}
-`
