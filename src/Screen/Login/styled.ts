@@ -2,59 +2,106 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-    height: calc(100vh - 5rem);
+    height: 88vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+
+
+    nav {
+        padding-top: 0.875rem;
+    }
+
+    a{ 
+        color: ${(props) => props.theme.colors.attention};
+        border-top:  3px solid transparent;
+        border-bottom:  3px solid transparent;
+        
+        
+        &:hover{
+          color: ${(props) => props.theme.colors.main_light};
+        }
+    }
     
 `;
 
 
 export const Title = styled.h2`
-     color: ${props => props.theme['gray-500']};
-     font-size: 1.5rem;
-     margin-bottom: 1rem;
-     text-align: center;
+     color: ${props => props.theme.colors.shape};
+     font-size: 2rem;
+     margin-bottom: 2rem;
+     font-family: ${(props) => props.theme.fonts.secondaty_500};
 `;
 
 export const Form = styled.form`
-    width: 100%;
-    max-width: 300px;
-    padding: 3.5rem;
-    border-radius: 8px;
-    display: flex;
-    flex-direction: column;
+     width: 100%;
+     max-width: 400px;
+     display: flex;
+     flex-direction: column;
 
-    background: ${(props) => props.theme.colors.BackgroundFormulary};
-    line-height: 1.5;
+     line-height: 1.5;
+     border: 0;
+
+     p{
+          color: ${(props) => props.theme.colors.attention};
+          padding: 0;
+          margin: 0;
+          border: 0;
+          font-size: 0.8rem;
+          font-family: ${(props) => props.theme.fonts.primary_400};
+
+     }
 `;
 
 export const Input = styled.input`
-     background: ${props => props.theme['gray-300']};
-     border: none;
-     line-height: 1.5;
-     margin-bottom: 1rem;
-     border-radius: 8px;
-     padding-left: 1rem;
-
-     &:hover{
-          color:  ${props => props.theme['green-500']};
+     line-height: 2;
+     margin: 0.8rem 0;
+     border: 0;
+     color: ${props => props.theme.colors.shape};
+     font-family: ${(props) => props.theme.fonts.secondaty_600};
+     background-color: transparent;
+     border-bottom: 1px solid ${props => props.theme['gray-300']};
+     font-size: 1.25rem;
+     
+     &:focus{
+          outline-color: none;
+          border: 1px solid ${props => props.theme.colors.hoverButtom};
+          border-radius: 8px;
      }
 `;
 
+
 export const Buttom = styled.button`
-     border: none;
-    
-     margin-top: 0.875rem;
-     background-color:  ${props => props.theme['green-500']};
-     
-     line-height: 1.5;
-     border-radius: 8px;
+     width: 100%;
+     border: 0;
+     padding: .875rem;
+     border-radius: 1px;
+     margin-top: 0.5rem;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     cursor: pointer;
+     background-color: ${props => props.theme.colors.hoverButtom};
+     color: ${props => props.theme.colors.shape};
+
+     //  aplicndo  estilo para o button disabl
+     &:disabled{
+          opacity: 0.7;
+          cursor: not-allowed;
+     }
+
+     &:not(:disabled)hover{
+          background: ${props => props.theme.colors.buttomHover} ;
+          transition: 2s;
+     }
 
      &:hover{
-      color: ${props => props.theme['buttonLogin']}; 
-
+          background: ${props => props.theme.colors.buttomHover} ;
+          transition: 2s;
      }
+
+    
 `;
 
 

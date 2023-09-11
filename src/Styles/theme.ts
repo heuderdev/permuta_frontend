@@ -11,10 +11,14 @@ export const defaultTheme = {
        main: '#ebebf0',
        main_light: '#ebebf0',
        success: '#03b252',
+       hoverButtom: '#00B37E',   // buttom 
        shape: '#e1e1e8',
        shape_dark: '#29292e',
        buttonLogin: '#fff',
-       BackgroundFormulary: '#323238'
+       BackgroundFormulary: '#323238',
+       BoxColor: '#323238',
+       buttomHover: '#015f43',
+       attention: '#AB222E', 
     },
     fonts: {
         primary_500:'Inter_400Regular',
@@ -41,6 +45,6 @@ export const defaultTheme = {
         'red-700': '#7A1921',
         'yellow-500': '#FBA94C',
         'buttonLogin': '#fff'
-      
+    
     
 }
