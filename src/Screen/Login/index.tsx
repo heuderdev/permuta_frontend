@@ -12,9 +12,9 @@ import { Header } from '../../Components/HeaderLogin'
 import { NavLink, Navigate } from 'react-router-dom';
 
 import { useForm } from 'react-hook-form'
-import { useContext } from 'react';
-import { AuthContext } from '../../Context/AuthProvider';
 import { useAuth } from '../../Context/AuthProvider/auth';
+
+import { toast } from 'react-toastify'
 
 
 interface ValuesProps {
@@ -27,8 +27,8 @@ export function Login() {
 
     // const notify = () => toast('Error Login inválido!');
 
-    const { authenticate } = useContext(AuthContext)
     const { token } = useAuth()
+    const auth = useAuth()
     const { register, handleSubmit, formState: { errors }, reset } = useForm<ValuesProps>()
 
     const handleLogin = async ({ email, password }: ValuesProps) => {
@@ -37,13 +37,13 @@ export function Login() {
         }
 
         try {
-            await authenticate(data.email, data.password)
-
+            await  auth.authenticate(data.email, data.password)
             return (
                 <NavLink to='/dashboard'></NavLink>
             )
-        } catch (error) {
-            console.log(error, 'error')
+        } catch (error: any) {
+            let replaceError = error.message.replace("Network Error", "Conexão recusada");
+           toast.error(replaceError)
         }
         reset()
     };

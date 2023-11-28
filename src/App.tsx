@@ -10,16 +10,14 @@ import 'react-toastify/ReactToastify.css'
 
 export function App() {
   return (
-  <>
-     <AuthProvider>
-       <ThemeProvider theme={defaultTheme}>
-      <BrowserRouter>
-        <Router />
-      </BrowserRouter>
-      <GlobalStyled />
-    </ThemeProvider>
-   </AuthProvider>
-    <ToastContainer/>
-  </>
+    <>
+      <ThemeProvider theme={defaultTheme}>
+        <AuthProvider>
+          <Router />
+        </AuthProvider>
+        <GlobalStyled />
+      </ThemeProvider>
+      <ToastContainer />
+    </>
   )
 }

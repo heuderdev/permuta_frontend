@@ -1,8 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { Header } from '../../Components/HeaderLogin'
-
 import { useForm } from 'react-hook-form'
-
 
 import {
     Container,
@@ -13,6 +11,7 @@ import {
     Label,
     Button,
 } from './styled'
+
 import { Api } from '../../services/api'
 import { toast } from 'react-toastify'
 
@@ -22,23 +21,17 @@ interface ValuesProps {
     password: string
 }[]
 
-
 export function CreateUser() {
 
     const { register, handleSubmit, formState: { errors }, reset } = useForm<ValuesProps>()
     const navigate = useNavigate();
 
     async function handleCreateUser({ name, email, password }: ValuesProps) {
-
         const data = {
             name, email, password
-
         }
-
         try {
-
             // conecxao sucesso 
-
             const response = await Api.post("/users/register", data)
             if (response.data.error === 'false') {
                 toast.error("Não foi possivel criar o usuário")
@@ -49,9 +42,7 @@ export function CreateUser() {
 
         } catch (error:any) {
             toast.error(`Verifique sua conecxão com o servidor, ${error.message}`)
-
         }
-
     }
 
     return (
@@ -65,18 +56,15 @@ export function CreateUser() {
                         <Input 
                             // {...register('name', { required: true })}
                             {...register("name", { required: true,  minLength:3  ,maxLength: 20 })}
-
                         />
                         {errors.name && (
                             <p>{"Informe no minímo 3 caracteres para validar o nome "}</p>
                         )}
                         <Label htmlFor='email'>Informe seu e-mail</Label>
                         <Input
-                            
                             {...register('email', {
                                 required: true,
                                 pattern:  /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i
-
                             })}
                         />
                          {

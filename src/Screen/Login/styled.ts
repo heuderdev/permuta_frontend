@@ -17,15 +17,13 @@ export const Container = styled.div`
         color: ${(props) => props.theme.colors.attention};
         border-top:  3px solid transparent;
         border-bottom:  3px solid transparent;
-        
-        
+         
         &:hover{
           color: ${(props) => props.theme.colors.main_light};
         }
     }
     
 `;
-
 
 export const Title = styled.h2`
      color: ${props => props.theme.colors.shape};
@@ -92,12 +90,12 @@ export const Buttom = styled.button`
      }
 
      &:not(:disabled)hover{
-          background: ${props => props.theme.colors.buttomHover} ;
+          background: ${props => props.theme.colors.buttom} ;
           transition: 2s;
      }
 
      &:hover{
-          background: ${props => props.theme.colors.buttomHover} ;
+          background: ${props => props.theme.colors.buttom} ;
           transition: 2s;
      }
 

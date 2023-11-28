@@ -1,9 +1,9 @@
 
+import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 
 
 export const Container = styled.header`
-    width: 100%;
     display: flex;
     align-self: center;
     justify-content: space-between;
@@ -16,7 +16,7 @@ export const Container = styled.header`
     }
 
     a{
-        width: 3rem;
+        width: 5rem;
         height: 3rem;
 
         display: flex;
@@ -41,4 +41,10 @@ export const Logo = styled.img`
     width: 6rem;
     height: 4rem;
 `;
+
+export const Link = styled(NavLink)` 
+  background-color: red;
+ 
+`;
+
 

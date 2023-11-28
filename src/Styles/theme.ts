@@ -15,10 +15,21 @@ export const defaultTheme = {
        shape: '#e1e1e8',
        shape_dark: '#29292e',
        buttonLogin: '#fff',
+       button: '#015f43',
        BackgroundFormulary: '#323238',
        BoxColor: '#323238',
-       buttomHover: '#015f43',
+       buttom: '#4CAF50 ',
        attention: '#AB222E', 
+
+       defaultgray100: '#E1E1E6',
+       defaultgray300: '#C4C4CC',
+       defaultgray400: '#8D8D99',
+       defaultgray500: '#7C7C8A',
+       defaultgray600: '#323238',
+       defaultBlackModal700: '#121214',
+
+
+
     },
     fonts: {
         primary_500:'Inter_400Regular',

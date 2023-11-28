@@ -23,11 +23,8 @@ export const AuthProvider = ({children}:IAuthProvider) =>{
     async function authenticate (email: string, password:string){
         const response = await LoginReequest(email, password)
         const payload = {token: response, email}
-
         setUser(payload)
         SetUserLocalStorang(payload)
-
-
     }
 
     async function logout (){
@@ -37,8 +34,8 @@ export const AuthProvider = ({children}:IAuthProvider) =>{
     }
 
 
-
     return(
+        //@ts-ignore
         <AuthContext.Provider value={{...user, authenticate, logout}}>
                 {children}
         </AuthContext.Provider>
